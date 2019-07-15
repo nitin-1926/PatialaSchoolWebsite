@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PatialaSchool.Org</title>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+$(window).scroll(function(){
+x = $(window).scrollTop();
+
+if (x>0){ 
+$("#donatebutton").stop().animate({width:'4.5%'},500);
+$("#donatebutton_text").html("&nbsp;&nbsp;&nbsp❤");
+}
+
+$("#donatebutton").mouseover(function(){
+  $("#donatebutton").stop().animate({width:'15%'},500);
+$("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
+
+
+
+});
+});});
+</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+
+  </head>
+  <body ng-app="">
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">patiala school</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item active"><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="download.html" class="nav-link">Downloads</a></li>
+            <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a  data-toggle="modal" href="#modal-login" class="nav-link">Login</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+
+    <!-- login box -->
+
+    <section>
+        <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #3a3a3a;color:#888">
+              
+              <div class="modal-header">
+                <p style="color:orange">For administrative purposes only:</p>
+                <button type="button" class="close" data-dismiss="modal" style="color: #fff">
+                  <span aria-hidden="true" >&times;</span><span class="sr-only">Close</span>
+                </button>
+              </div>
+              
+              <div class="modal-body">
+                
+                      <form role="form" action="" method="post" class="login-form" ng-app="" name="myForm">
+                        <div class="form-group">
+                          <label class="sr-only" for="form-username"style="border-color: #399599">Email</label>
+                            <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" required><br>
+                            <span style="color:orange" ng-show="myForm.myaddress.$error.email"><i class="fa fa-remove"></i>Please Enter a valid email address..</span> 
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="form-password">Password</label>
+                            <input type="password" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
+                            <div ng-messages="myForm.userPassword.$error">
+                              
+                              <div style="color:orange" ng-show="!myForm.userPassword.$valid"><i class="fa fa-remove" ></i>Invalid Password</div>
+          </div>
+              </div>              
+                          </div>
+                          <button type="submit" class="btn  btn-lg" style="background-color: orange" >Log in!</button>
+                      </form>
+                      
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+    </section>
+    
+    <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">Gallery</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Gallery</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<div>
+  <style type="text/css">
+    .project {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+  margin-bottom: 50px; }
+  .project .img {
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05); }
+  .project img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    z-index: -1;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+  .project .text {
+    padding: 1em 0 1em 0;
+    position: relative;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+    .project .text span {
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(0, 0, 0, 0.2); }
+    .project .text h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #000000; }
+      .project .text h3 a {
+        color: #000000; }
+ 
+  .project:hover .text .price, .project:focus .text .price {
+    background: #2e9e5b; }
+  
+  .project:hover img, .project:focus img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); }
+
+.ftco-project .owl-carousel {
+  margin: 0; }
+
+.ftco-project .owl-carousel .owl-stage-outer {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative; }
+
+.ftco-project .owl-nav {
+  position: absolute;
+  bottom: 75% !important;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  @media (max-width: 991.98px) {
+    .ftco-project .owl-nav {
+      display: none; } }
+  .ftco-project .owl-nav .owl-prev,
+  .ftco-project .owl-nav .owl-next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: transparent !important;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    opacity: 1; }
+    .ftco-project .owl-nav .owl-prev span:before,
+    .ftco-project .owl-nav .owl-next span:before {
+      font-size: 24px;
+      margin-top: 7px;
+      color: #000000; }
+  .ftco-project .owl-nav .owl-prev {
+    top: 0 !important;
+    left: 0px !important; }
+    @media (min-width: 992px) {
+      .ftco-project .owl-nav .owl-prev {
+        left: -60px !important; } }
+    .ftco-project .owl-nav .owl-prev:hover, .ftco-project .owl-nav .owl-prev:focus {
+      background: transparent !important;
+      outline: none !important; }
+      .ftco-project .owl-nav .owl-prev:hover span:before, .ftco-project .owl-nav .owl-prev:focus span:before {
+        color: #fff; }
+  .ftco-project .owl-nav .owl-next {
+    top: 0 !important;
+    right: 0px !important; }
+    @media (min-width: 992px) {
+      .ftco-project .owl-nav .owl-next {
+        right: -60px !important; } }
+    .ftco-project .owl-nav .owl-next:hover, .ftco-project .owl-nav .owl-next:focus {
+      background: transparent !important;
+      outline: none !important; }
+      .ftco-project .owl-nav .owl-next:hover span:before, .ftco-project .owl-nav .owl-next:focus span:before {
+        color: #2e9e5b; }
+
+.ftco-project .owl-dots {
+  text-align: center; }
+  .ftco-project .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1); }
+    .ftco-project .owl-dots .owl-dot.active {
+      background: #fdb82c; }
+  </style>
+
+
+
+
+     <section class="ftco-section ftco-project bg-light" data-section="projects">
+      <div class="container-fluid px-md-5">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <span class="subheading"></span>
+            <h2 class="mb-4">Our Albums</h2>
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 testimonial">
+            <div class="carousel-project owl-carousel">
+              <div class="item">
+                <div class="project">
+                  <div class="img">
+                    <img src="images/project-1.jpg" class="img-fluid" alt="Colorlib Template">
+                    <a href="images/project-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                    </a>
+                  </div>
+                  <div class="text px-4">
+                    <h3><a href="#foundation_day" id="b1">47th Foundation Day Celebration</h3>
+                    <span>Click for all photos</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project">
+                  <div class="img">
+                    <img src="images/project-2.jpg" class="img-fluid" alt="Colorlib Template">
+                    <a href="images/project-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                    </a>
+                  </div>
+                  <div class="text px-4">
+                    <h3><a href="#fd2" id="b2">49th Foundation Day Celebration</h3>
+                    <span>Click for all photos</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project">
+                  <div class="img">
+                    <img src="images/project-3.jpg" class="img-fluid" alt="Colorlib Template">
+                    <a href="images/project-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                    </a>
+                  </div>
+                  <div class="text px-4">
+                    <h3><a href="#ac" id="b3">Art & Craft</h3>
+                    <span>Click for all photos</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project">
+                  <div class="img">
+                    <img src="images/project-4.jpg" class="img-fluid" alt="Colorlib Template">
+                    <a href="images/project-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                    </a>
+                  </div>
+                  <div class="text px-4">
+                    <h3><a href="#pk" id="b4">Inaugration Of Guest House "PREM KUNJ"</h3>
+                    <span>Click for all photos</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project">
+                  <div class="img">
+                    <img src="images/project-5.jpg" class="img-fluid" alt="Colorlib Template">
+                    <a href="images/project-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                    </a>
+                  </div>
+                  <div class="text px-4">
+                    <h3><a href="#psb" id="b5">Patiala School for blind</h3>
+                    <span>Click for all photos</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project">
+                  <div class="img">
+                    <img src="images/project-6.jpg" class="img-fluid" alt="Colorlib Template">
+                    <a href="images/project-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                    </a>
+                  </div>
+                  <div class="text px-4">
+                    <h3><a href="#psd" id="b6">Patiala School for Deaf</h3>
+                    <span>Click for all photos</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project">
+                  <div class="img">
+                    <img src="images/project-7.jpg" class="img-fluid" alt="Colorlib Template">
+                    <a href="images/project-7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                    </a>
+                  </div>
+                  <div class="text px-4">
+                    <h3><a href="#misc" id="b7">Misc Activities</h3>
+                    <span>Click for all photos</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+<a name="foundation_day"></a>
+
+
+
+
+ <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
+                  <div class="pr-md-5 mr-md-5">
+                    <span class="subheading">47<sup>th</sup> FOUNDATION DAY ALBUM</span>
+                    
+                  </div>
+                  </div>
+
+
+		<section class="ftco-section" id="1">
+    	<div class="container-fluid">
+    		<div class="row no-gutters">
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="images/foundation_day_1.jpg" class="img-fluid" alt="Colorlib Template">
+	    				
+	    				<a href="images/foundation_day_1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="images/foundation_day_2.jpg" class="img-fluid" alt="Colorlib Template">
+	    				
+	    				<a href="images/foundation_day_2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="images/foundation_day_3.jpg" class="img-fluid" alt="Colorlib Template">
+	    				
+	    				<a href="images/foundation_day_3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="images/foundation_day_4.jpg" class="img-fluid" alt="Colorlib Template">
+	    				
+	    				<a href="images/foundation_day_4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="images/foundation_day_5.jpg" class="img-fluid" alt="Colorlib Template">
+	    				
+	    				<a href="images/foundation_day_5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="images/foundation_day_6.jpg" class="img-fluid" alt="Colorlib Template">
+	    				
+	    				<a href="images/foundation_day_6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="images/foundation_day_7.jpg" class="img-fluid" alt="Colorlib Template">
+	    				
+	    				<a href="images/foundation_day_7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+              <div>
+	    				<img src="images/foundation_day_8.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+	    				
+	    				<a href="images/foundation_day_8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_9.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_9.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_10.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_10.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_11.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_11.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_12.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_12.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_13.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_13.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_14.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_14.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_15.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_15.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_16.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_16.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_17.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_17.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_18.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_18.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_19.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_19.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/foundation_day_20.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/foundation_day_20.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+    		</div>
+    		<div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                
+                <li class="active"><span>1</span></li>
+                <li><a href="#fd2">2</a></li>
+                <li><a href="#ac">3</a></li>
+                <li><a href="#pk">4</a></li>
+                <li><a href="#psb">5</a></li>
+                <li><a href="#psd">6</a></li>
+                <li><a href="#misc">7</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+    	</div>
+
+    </section>
+
+
+
+    
+<a name="fd2" style=" "> </a>
+
+
+    <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line"  style="padding-top: 90px">
+                  <div class="pr-md-5 mr-md-5">
+
+                    <span class="subheading">49<sup>th</sup> FOUNDATION DAY ALBUM</span>
+                    
+                  </div>
+                  </div>
+
+
+
+    <section class="ftco-section" id="2">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/fd1.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/fd1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/fd2.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/fd2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/fd3.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/fd3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/fd4.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/fd4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/fd5.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/fd5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/fd6.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/fd6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/fd7.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/fd7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd8.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd9.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd9.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd10.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd10.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd11.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd11.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd12.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd12.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd13.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd13.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd14.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd14.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd15.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd15.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/fd16.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/fd16.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#foundation_day">1</a></li>
+                <li class="active"><span>2</span></li>
+                
+                <li><a href="#ac">3</a></li>
+                <li><a href="#pk">4</a></li>
+                <li><a href="#psb">5</a></li>
+                <li><a href="#psd">6</a></li>
+                <li><a href="#misc">7</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <a name="ac"></a>
+
+
+
+
+    <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
+                  <div class="pr-md-5 mr-md-5">
+                    <span class="subheading">ART & CRAFT ALBUM</span>
+                    
+                  </div>
+                  </div>
+
+
+    <section class="ftco-section" id="3">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ac1.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ac1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ac2.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ac2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ac3.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ac3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ac4.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ac4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ac5.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ac5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ac6.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ac6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ac7.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ac7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ac8.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ac8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ac9.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ac9.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#foundation_day">1</a></li>
+                
+                <li><a href="#fd2">2</a></li>
+                <li class="active"><span>3</span></li>
+                
+                <li><a href="#pk">4</a></li>
+                <li><a href="#psb">5</a></li>
+                <li><a href="#psd">6</a></li>
+                <li><a href="#misc">7</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <a name="pk"></a>
+
+
+
+
+    <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
+                  <div class="pr-md-5 mr-md-5">
+                    <span class="subheading">PREM KUNJ INAUGRATION ALBUM</span>
+                    
+                  </div>
+                  </div>
+
+    
+
+
+    <section class="ftco-section" id="4">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/pk1.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/pk1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/pk2.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/pk2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/pk3.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/pk3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/pk4.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/pk4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/pk5.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/pk5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/pk6.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/pk6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/pk7.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/pk7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/pk8.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/pk8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#foundation_day">1</a></li>
+                
+                <li><a href="#fd2">2</a></li>
+                <li><a href="#ac">3</a></li>
+                <li class="active"><span>4</span></li>
+
+                <li><a href="#psb">5</a></li>
+                <li><a href="#psd">6</a></li>
+                <li><a href="#misc">7</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <a name="psb"></a>
+
+
+
+    <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
+                  <div class="pr-md-5 mr-md-5">
+                    <span class="subheading">PATIALA SCHOOL FOR BLIND ALBUM</span>
+                    
+                  </div>
+                  </div>
+
+
+
+    <section class="ftco-section" id="5">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/bs1.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/bs1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/bs2.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/bs2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/bs3.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/bs3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/bs4.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/bs4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/bs5.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/bs5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/bs6.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/bs6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/bs7.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/bs7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs8.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs9.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs9.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs10.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs10.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs11.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs11.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs12.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs12.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs13.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs13.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs14.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs14.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs15.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs15.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/bs16.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/bs16.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#foundation_day">1</a></li>
+                
+                <li><a href="#fd2">2</a></li>
+                <li><a href="#ac">3</a></li>
+                <li><a href="#pk">4</a></li>
+                
+                <li class="active"><span>5</span></li>
+                <li><a href="#psd">6</a></li>
+                <li><a href="#misc">7</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <a name="psd"></a>
+
+
+    <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
+                  <div class="pr-md-5 mr-md-5">
+                    <span class="subheading">PATIALA SCHOOL FOR DEAF ALBUM</span>
+                    
+                  </div>
+                  </div>
+
+
+
+    <section class="ftco-section" id="6">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ds1.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ds1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ds2.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ds2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ds3.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ds3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ds4.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ds4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ds5.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ds5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ds6.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ds6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ds7.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ds7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds8.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds9.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds9.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds10.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds10.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds11.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds11.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds12.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds12.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds13.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds13.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds14.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds14.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds15.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds15.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds16.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds16.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds17.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds17.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds18.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds18.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds19.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds19.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds20.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds20.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds21.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds21.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds22.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds22.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds23.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds23.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds24.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds24.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds25.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds25.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ds26.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ds26.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#foundation_day">1</a></li>
+                
+                <li><a href="#fd2">2</a></li>
+                <li><a href="#ac">3</a></li>
+                <li><a href="#pk">4</a></li>
+                <li><a href="#psb">5</a></li>
+                <li class="active"><span>6</span></li>
+                
+                <li><a href="#misc">7</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <a name="misc"></a>
+
+
+
+    <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
+                  <div class="pr-md-5 mr-md-5">
+                    <span class="subheading">MISC ACTIVITIES ALBUM</span>
+                    
+                  </div>
+                  </div>
+
+
+    <section class="ftco-section" id="7">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ms1.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ms1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ms2.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ms2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ms3.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ms3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ms4.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ms4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ms5.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ms5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ms6.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ms6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <img src="images/ms7.jpg" class="img-fluid" alt="Colorlib Template">
+              
+              <a href="images/ms7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms8.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms9.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms9.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms10.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms10.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms11.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms11.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms12.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms12.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms13.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms13.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms14.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms14.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms15.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms15.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms16.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms16.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms17.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms17.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms18.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms18.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms19.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms19.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div><div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="project">
+              <div>
+              <img src="images/ms20.jpg" class="img-fluid" alt="Colorlib Template">
+            </div>
+              
+              <a href="images/ms20.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                <span class="icon-expand"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#foundation_day">1</a></li>
+                
+                <li><a href="#fd2">2</a></li>
+                <li><a href="#ac">3</a></li>
+                <li><a href="#pk">4</a></li>
+                <li><a href="#psb">5</a></li>
+                
+                <li><a href="#psd">6</a></li>
+                <li class="active"><span>7</span></li>
+                
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+<!--Donate button-->
+<a href="donate.html">
+<div id="donatebutton"  style="color: white;background-color: pink;position: fixed;bottom: 5%;right: 5%;border-radius: 40px;width:15%;height:8%;font-size: 150%" ><p style="margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
+
+    
+
+
+
+
+
+
+    
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">PatialaSchools</h2>
+              <p>We make the children,<br>Service Providers,<br>not Service seekers</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="https://twitter.com/patialadeafscho"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/SocietyForTheWelfareofHandicapped/"><span class="icon-facebook"></span></a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="download.html">Downloads</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">VILLAGE SAIFIDIPUR
+BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
+PUNJAB, INDIA</span></li>
+                  <li><a href="tel://+91 97800 43892"><span class="icon icon-phone"></span><span class="text">+91 97800 43892, +91 97800 43893</span></a></li>
+                  <li><a href="mailto:info@patialaschool.com"><span class="icon icon-envelope"></span><span class="text">info@patialaschool.com</span></a></li>
+
+
+                </ul>
+              </div>
+              <a href="donate.html">
+<div id="donatebutton"  style="color: white;background-color: pink;position: absolute;border-radius: 40px;width:50%;height:18%;font-size: 150%" ><p style="margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

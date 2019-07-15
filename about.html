@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PatialaSchool.org</title>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+$(window).scroll(function(){
+x = $(window).scrollTop();
+
+if (x>0){ 
+$("#donatebutton").stop().animate({width:'4.5%'},500);
+$("#donatebutton_text").html("&nbsp;&nbsp;&nbsp❤");
+}
+
+$("#donatebutton").mouseover(function(){
+  $("#donatebutton").stop().animate({width:'15%'},500);
+$("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
+
+});
+});});
+</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body ng-app="">
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">PATIALA SCHOOL</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="download.html" class="nav-link">Downloads</a></li>
+            <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a  data-toggle="modal" href="#modal-login" class="nav-link">Login</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+
+    <!-- login box -->
+
+    <section>
+        <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #3a3a3a;color:#888">
+              
+              <div class="modal-header">
+                <p style="color:orange">For administrative purposes only:</p>
+                <button type="button" class="close" data-dismiss="modal" style="color: #fff">
+                  <span aria-hidden="true" >&times;</span><span class="sr-only">Close</span>
+                </button>
+              </div>
+              
+              <div class="modal-body">
+                
+                      <form role="form" action="" method="post" class="login-form" ng-app="" name="myForm">
+                        <div class="form-group">
+                          <label class="sr-only" for="form-username"style="border-color: #399599">Email</label>
+                            <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" required><br>
+                            <span style="color:orange" ng-show="myForm.myaddress.$error.email"><i class="fa fa-remove"></i>Please Enter a valid email address..</span> 
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="form-password">Password</label>
+                            <input type="password" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
+                            <div ng-messages="myForm.userPassword.$error">
+                              
+                              <div style="color:orange" ng-show="!myForm.userPassword.$valid"><i class="fa fa-remove" ></i>Invalid Password</div>
+          </div>
+              </div>              
+                          </div>
+                          <button type="submit" class="btn  btn-lg" style="background-color: orange" >Log in!</button>
+                      </form>
+                      
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+    </section>
+    
+    <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">About</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftc-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-5 p-md-5 img img-2" style="background-image: url(images/about.jpg);">
+					</div>
+					<div class="col-md-7 wrap-about pb-md-5 pt-5 ftco-animate">
+	          <div class="heading-section mb-5 pl-md-5 heading-section-with-line">
+	          	<div class="pl-md-5 ml-md-5">
+		          	<span class="subheading">About</span>
+		            <h2 class="mb-4">Patiala School For Deaf</h2>
+	            </div>
+	          </div>
+	          <div class="pl-md-5 ml-md-5 mb-5">
+							<p>Education is provided in a scientific manner by trained staff. Proper audiometry tests are periodically done to test the hearing capabilities and change our pattern of teaching accordingly. The school has a special speech therapy center which is managed by trained staff. After class XII the students are provided vocational training in the trade of their choice to enable them to work on their own and not be dependent on any one. For the deaf children we also have a marriage bureau service for appropriate match making.</p><p>
+ 
+This School provides FREE special education to Deaf boys and girls. We cater to the poor families of rural areas and villages. 
+Patiala School for The Deaf was started in 1967 and has a chequered history of 45 years. What started on an experimental basis is now one of The premier schools for providing special education to Deaf boys and girls in India.</p>
+The Deaf school is from Nursery class to Class XII. The School is Co-Educational and Residential. <p>
+The school has a vision of total communication being used to teach the Deaf children with latest techniques by trained staff in Sign language, Speech therapy, Computers, Art and Craft of many types, Sports, Extra Curricular activities and much more.
+Our vision is to empower the Deaf Children to be part of the inclusive society and main stream. Be a productive member of the family and earn laurels.</p>
+							<!--
+							<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
+            -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row d-md-flex align-items-center justify-content-center">
+          <div class="col-lg-4">
+            <div class="heading-section pl-md-5 heading-section-white">
+              <div class="pl-md-5 ml-md-5 ftco-animate">
+                <span class="subheading">Some</span>
+                <h2 class="mb-4">Interesting Facts</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row d-md-flex align-items-center">
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                  <div class="text">
+                    <strong class="number" data-number="56">0</strong>
+                    <span>Years of Experienced</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                  <div class="text">
+                    <strong class="number" data-number="3000">0</strong>
+                    <span>Alumini</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                  <div class="text">
+                    <strong class="number" data-number="260">0</strong>
+                    <span>Working Days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section class="ftco-section ftc-no-pb" >
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-5 p-md-5 img img-2 order-md-last" style="background-image: url(images/about.jpg);">
+          </div>
+          <div class="col-md-7 wrap-about pb-md-5 ftco-animate">
+            <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line">
+              <div class="pr-md-5 mr-md-5">
+                <span class="subheading">About</span>
+                <h2 class="mb-4">Patiala School For Blind</h2>
+              </div>
+            </div>
+            <div class="pr-md-5 mr-md-5">
+              <p>
+This school is from Nursery to Class XII. It is Co Educational and residential. This is the only residential school for Blind girls in Punjab State of India. School provides totally FREE education to blind boys and girls. No fees of any kind is charged for education, uniform, stationary, meals & hostels.</p><p>
+School has the latest equipment for the Blind children, including Read IT Wand, which can scan a book, newspaper or magazine and read it aloud to the Blind students. It is easy to operate and Blind friendly.
+The blind students education starts from a well equipped Sensory room. The aim is to first improve the sensory touch of the fingers and also provided them knowledge of each and everything which they are likely to encounter in daily life or otherwise.</p><p>
+School has a big library with all facilities and good ambience.
+Blind students are given full facility even after Class XII, to do their degree in the colleges. 
+School provides all facilities for sports, cricket, and indoor games.
+Blind children are also put through some Art and craft and vocational training capsules.</p>
+              <!--
+              <p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
+            -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+        <section class="ftc-no-pb">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-5 p-md-5 img img-2" style="background-image: url(images/about.jpg);">
+          </div>
+          <div class="col-md-7 wrap-about pb-md-5 pt-5 ftco-animate">
+            <div class="heading-section mb-5 pl-md-5 heading-section-with-line">
+              <div class="pl-md-5 ml-md-5">
+                <span class="subheading">About</span>
+                <h2 class="mb-4">Patiala School For Deaf-Blind</h2>
+              </div>
+            </div>
+            <div class="pl-md-5 ml-md-5 mb-5">
+              <p>
+This is the third DeafBlind school in India for the children with multiple disability of Visual and Hearing Impairment.</p><p>
+ 
+The class rooms of DeafBlind children are specially equipped with teaching aids and equipment.</p><p>
+ 
+The school also has a “PACMATE” so that DeafBlind can read books, newspapers, magazines etc in Braille.</p><p>
+ 
+The teacher to student ratio is one teacher for every two students and One attendant.</p>
+              <!--
+              <p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
+            -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="ftco-section ftc-no-pb" >
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-5 p-md-5 img img-2 order-md-last" style="background-image: url(images/adminfo.jpg);">
+          </div>
+          <div class="col-md-7 wrap-about pb-md-5 ftco-animate">
+            <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line">
+              <div class="pr-md-5 mr-md-5">
+                <span class="subheading">AddmissionInfo</span>
+                <h2 class="mb-4"></h2>
+              </div>
+            </div>
+            <div class="pr-md-5 mr-md-5">
+              <p>Admissions are on basis of first come first serve.</p><p>
+Preference is given to girls for admission.</p><p>
+Children who are Orphan, from villages and poor families are preferred.</p><p>
+Deaf and Blind children, from Age ZERO onwards can also be admitted/provided early Intervention.
+</p>
+              <!--
+              <p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
+            -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="ftco-section testimony-section"  style="display: none;">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+            <h2 class="mb-4">Our satisfied customer says</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+			
+		
+
+
+
+<!--Donate button-->
+<a href="donate.html">
+<div id="donatebutton"  style="color: white;background-color: pink;position: fixed;bottom: 5%;right: 5%;border-radius: 40px;width:15%;height:8%;font-size: 150%" ><p style="margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
+
+    
+
+
+
+
+
+
+    
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">PatialaSchools</h2>
+              <p>We make the children,<br>Service Providers,<br>not Service seekers</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="https://twitter.com/patialadeafscho"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/SocietyForTheWelfareofHandicapped/"><span class="icon-facebook"></span></a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="download.html">Downloads</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">VILLAGE SAIFIDIPUR
+BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
+PUNJAB, INDIA</span></li>
+                  <li><a href="tel://+91 97800 43892"><span class="icon icon-phone"></span><span class="text">+91 97800 43892, +91 97800 43893</span></a></li>
+                  <li><a href="mailto:info@patialaschool.com"><span class="icon icon-envelope"></span><span class="text">info@patialaschool.com</span></a></li>
+
+
+                </ul>
+              </div>
+              <a href="donate.html">
+<div id="donatebutton"  style="color: white;background-color: pink;position: absolute;border-radius: 40px;width:50%;height:18%;font-size: 150%" ><p style="margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
