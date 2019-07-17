@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		HOME PAGE
+	</title>
+ 	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="css/homestyle.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyDab5iXo67c3NYM9x9fMby-Sb9SRgAFyzg",
+    authDomain: "signup-29e25.firebaseapp.com",
+    databaseURL: "https://signup-29e25.firebaseio.com",
+    projectId: "signup-29e25",
+    storageBucket: "signup-29e25.appspot.com",
+    messagingSenderId: "175460446228",
+    appId: "1:175460446228:web:20c8638d03bca192"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+<body>
+	<div id="mainpage">
+		<nav class="navbar navbar-default">
+				<div class="container-fluid">
+				<div class="navbar-header">
+	  				<a class="navbar-brand" href="#">Patiala School Of Deaf And Blind</a>
+				</div>
+				<button class="btn btn-warning" onclick="logout()" class="logoutbtn">Logout</button>
+				</div>
+		</nav>	
+		<div id="leftview" class="container">
+			<br>
+			<h4>ACTION ELEMENTS</h4>
+			<ul>
+				<li style="margin-top: 10px;"><span style="font-size:18px;cursor:pointer;" onclick="home()">Home</span></li>
+				<li style="margin-top: 20px;"><span style="font-size:18px;cursor:pointer;" onclick="addnews()">Add News</span></li>
+			</ul>
+		</div>
+		<div id="rightview" class="container">
+	  		<div id="main">
+	  			<div>
+	  				<image src="images/dp.jpg"></image>
+	  			</div>
+	  		</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="commonredirecting.js"></script>
+<script type="text/javascript" src="common.js"></script>
+</html>

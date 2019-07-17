@@ -1,0 +1,25 @@
+ body,html{
+ 	height: 100%;
+ 	width: 100%;
+ }
+ .btn-warning{
+	margin-top: 7px;
+	margin-left: 950px;
+}
+#mainpage{
+	height: 100%;
+	width: 100%;
+}
+#leftview{
+	margin-top: -2%;
+	width: 20%;
+	height: 100%;
+	float: left;
+	border: 1px solid black;
+}
+#rightview{
+	margin-top: -2%;
+	width: 80%;
+	float: left;
+	height: 100%;
+}
