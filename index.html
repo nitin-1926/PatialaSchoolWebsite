@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 
@@ -32,43 +32,36 @@
     <script>
     $(document).ready(function(){
 
-    $(window).scroll(function(){
-    x = $(window).scrollTop();
+$(window).scroll(function(){
+x = $(window).scrollTop();
 
-    if (x>0){ 
-    $("#donatebutton").stop().animate({width:'4.5%'},500);
-    $("#donatebutton_text").html("&nbsp;&nbsp;&nbsp❤");
-    }
+if (x>0){ 
+$("#donatebutton").stop().animate({width:'4.5%'},500);
+$("#donatebutton_text").html("&nbsp;&nbsp;&nbsp❤");
+}
 
-    $("#donatebutton").mouseover(function(){
-      $("#donatebutton").stop().animate({width:'15%'},500);
-    $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
+$("#donatebutton").mouseover(function(){
+  $("#donatebutton").stop().animate({width:'15%'},500);
+$("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
 
-    });
-    });});
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+});
+});});
+</script>
 
-    <script>
 
-      var firebaseConfig = {
-        apiKey: "AIzaSyDab5iXo67c3NYM9x9fMby-Sb9SRgAFyzg",
-        authDomain: "signup-29e25.firebaseapp.com",
-        databaseURL: "https://signup-29e25.firebaseio.com",
-        projectId: "signup-29e25",
-        storageBucket: "signup-29e25.appspot.com",
-        messagingSenderId: "175460446228",
-        appId: "1:175460446228:web:20c8638d03bca192"
-      };
-
-      firebase.initializeApp(firebaseConfig);
-    </script>
 
   </head>
   <body ng-app="">
 
+
+
+
+
+
+
+
+
+    
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Patiala school</a>
@@ -91,7 +84,9 @@
 	  </nav>
     <!-- END nav -->
 
+
     <!-- login box -->
+
     <section>
         <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
           <div class="modal-dialog">
@@ -106,31 +101,37 @@
               
               <div class="modal-body">
                 
-                      <form role="form" method="post" class="login-form" ng-app="" name="myForm">
+                      <form role="form" action="" method="post" class="login-form" ng-app="" name="myForm">
                         <div class="form-group">
                           <label class="sr-only" for="form-username"style="border-color: #399599">Email</label>
-                            <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" style="border-radius: 10px;" required><br>
+                            <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" required><br>
                             <span style="color:orange"  ng-show="myForm.myaddress.$error.email"><i class="fa fa-remove"></i>Please Enter a valid email address..</span> 
                           </div>
-
                           <div class="form-group">
                             <label class="sr-only" for="form-password">Password</label>
-                            <input type="password" style="border-radius: 10px;" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
+                            <input type="password" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
                             <div ng-messages="myForm.userPassword.$error">
-
-                            </div>
-                          </div>              
+                              
+                              <div style="color:orange" ng-show="!myForm.userPassword.$valid"><i class="fa fa-remove" ></i>Invalid Password</div>
+          </div>
+              </div>              
+                          </div>
+                          <button type="submit" class="btn  btn-lg" style="background-color: orange" >Log in!</button>
+                      </form>
+                      
               </div>
-                          <center>
-                            <button onclick="login()" type="submit" class="btn btn-warning" style="width:40%;background-color: orange; margin-bottom: 8%" >Login</button>
-                          </center>
-                      </form>                     
-              </div>             
+              
             </div>
           </div>
         </div>
+
+
     </section>
- 
+
+
+
+
+    
     <section class="home-slider js-fullheight owl-carousel">
       <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
       	<div class="overlay"></div>
@@ -152,7 +153,7 @@
           <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">adjudged as the BEST NGO in India</h1>
             <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">The President of India presented the award in Rashtrapati Bhawan, New Delhi in person to Col Karaminder Singh on 14 Nov 2015 at 1400 hrs.
-            In 2014 we were adjudged as the best NGO of Punjab State.
+In 2014 we were adjudged as the best NGO of Punjab State.
           </div>
         </div>
         </div>
@@ -201,7 +202,7 @@
 					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
 	          <div class="heading-section mb-5 pl-md-5 heading-section-with-line">
 	          	<div class="pl-md-5 ml-md-5">
-		          	<span class="subheading">About</span>
+		          	<span class="subheading">About Us</span>
 		            <h2 class="mb-4">We make the children - Service providers - not service seekers</h2>
 	            </div>
 	          </div>
@@ -273,7 +274,7 @@
     		<div class="row no-gutters">
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="project">
-	    				<img src="images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
+	    				<img src="images/work-1.jpg" class="img-fluid">
 	    				<div class="text">
 	    					<h3>47th Foundation Day Celebrations</h3>
 	    				</div>
@@ -284,7 +285,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="project">
-	    				<img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
+	    				<img src="images/work-2.jpg" class="img-fluid">
 	    				<div class="text">
 	    					<h3>Art & Craft</h3>
 	    				</div>
@@ -295,7 +296,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="project">
-	    				<img src="images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
+	    				<img src="images/work-3.jpg" class="img-fluid">
 	    				<div class="text">
 	    					<h3>49th foundation day celebrations</h3>
 	    				</div>
@@ -306,7 +307,7 @@
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="project">
-	    				<img src="images/work-4.jpg" class="img-fluid" alt="Colorlib Template">
+	    				<img src="images/work-4.jpg" class="img-fluid">
 	    				<div class="text">
 	    					<h3>Misc Activities</h3>
 	    				</div>
@@ -314,7 +315,7 @@
 	    					<span class="icon-expand"></span>
 	    				</a>
     				</div>
-    				<p style="float: right;"><a href="gallery.html" class="btn-custom" >View Full Albums<span class="ion-ios-arrow-forward"></span></a></p>
+    				<p style="float: left;"><a href="gallery.html" class="btn-custom" >View Full Albums<span class="ion-ios-arrow-forward"></span></a></p>
     			</div>
     		</div>
     	</div>
@@ -341,9 +342,8 @@
                   </div>
                   <div class="text">
                     <p class="mb-5 pl-4 line">Thapar College of Technology and Engineering
-                                              Patiala 147001
-                                              Punjab, India
-                    </p>
+Patiala 147001
+Punjab, India</p>
                     <p class="name">Thapar University Patiala</p>
                     
                   </div>
@@ -358,9 +358,8 @@
                   </div>
                   <div class="text">
                     <p class="mb-5 pl-4 line">State Bank of Patiala Head Office, Patiala 
-                                              Patiala 147001
-                                              Punjab, India
-                    </p>
+Patiala 147001
+Punjab, India</p>
                     <p class="name">State Bank of Patiala Head Office, Patiala </p>
                     </div>
                 </div>
@@ -375,13 +374,12 @@
                   <div class="text">
                     <p class="mb-5 pl-4 line">OM Associates Pte. Ltd.
 
-                                              Mr. Prem Krishan Khosla and Mrs. Nirmal Khosla
-                                              Mr. Ashok Khosla and Mrs. Madhu Khosla
+Mr. Prem Krishan Khosla and Mrs. Nirmal Khosla
+Mr. Ashok Khosla and Mrs. Madhu Khosla
 
-                                              80, Marine Parade Road, #07-02, Parkway Parade,
-                                              Singapore 449269
-                                              E-mail : ashok@om_associates.com, kiran@om-associates.com
-                    </p>
+80, Marine Parade Road, #07-02, Parkway Parade,
+Singapore 449269
+E-mail : ashok@om_associates.com, kiran@om-associates.com</p>
                     <p class="name">Om Associates (Singapore)</p>
                   </div>
                 </div>
@@ -395,11 +393,10 @@
                   </div>
                   <div class="text">
                     <p class="mb-5 pl-4 line">Mr. Prem Puri and Mrs. Kamlesh Puri
-                                              Mr. Vicrum Puri and Mrs. Raya Puri
-                                              Mr. Dinesh Jain and Mrs Anita Jain
+Mr. Vicrum Puri and Mrs. Raya Puri
+Mr. Dinesh Jain and Mrs Anita Jain
 
-                                              Email: prem@classicmd.org 
-                    </p>
+Email: prem@classicmd.org </p>
                     <p class="name">DD Puri Foundation (USA)</p>
                     </div>
                 </div>
@@ -410,7 +407,9 @@
         </div>
       </div>
     </section>
-
+			
+		
+		
     <a name="contact"></a>
 
     <section class="ftco-section contact-section">
@@ -423,14 +422,12 @@
               </div>
               <h3 class="mb-4">Registered Office</h3>
               <p>SOCIETY FOR WELFARE OF THE HANDICAPPED (REGD.)
-                AMAR ASHRAM, LOWER MALL, PATIALA - 147001
-                PUNJAB, INDIA
-              </p>
+AMAR ASHRAM, LOWER MALL, PATIALA - 147001
+PUNJAB, INDIA</p>
               <h3 class="mb-4">School Address</h3>
               <p>VILLAGE SAIFIDIPUR
-                BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
-                PUNJAB, INDIA
-              </p>
+BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
+PUNJAB, INDIA</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex">
@@ -439,9 +436,9 @@
                 <span class="icon-phone2"></span>
               </div>
               <h3 class="mb-4">Contact Number Office</h3>
-              <p><a href="tel://+91 0175 2301819">TEL No.: +91 0175 2301819, +91 97800 43892</a></p>
+              <p><a href="tel://+91 0175 2301819" style="color: grey">TEL No.: +91 0175 2301819, +91 97800 43892</a></p>
               <h3 class="mb-4">Contact Number School</h3>
-              <p><a href="tel://+91 97800 43892">TEL No.: +91 97800 43892, +91 97800 43893</a></p>
+              <p><a href="tel://+91 97800 43892" style="color: grey">TEL No.: +91 97800 43892, +91 97800 43893</a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex">
@@ -450,7 +447,7 @@
                 <span class="icon-paper-plane"></span>
               </div>
               <h3 class="mb-4">Email Address</h3>
-              <p><a href="mailto:info@patialaschool.com">info@patialaschool.com</a></p>
+              <p><a href="mailto:info@patialaschool.com" style="color: grey">info@patialaschool.com</a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex">
@@ -459,14 +456,17 @@
                 <span class="icon-globe"></span>
               </div>
               <h3 class="mb-4">Website</h3>
-              <p><a href="patialaschool.org">patialaschool.org</a></p>
+              <p><a href="patialaschool.org" style="color: grey">patialaschool.org</a></p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-<section class="ftco-section contact-section">
+
+
+
+		<section class="ftco-section contact-section">
       <div class="container">
         
         <div class="row block-9">
@@ -485,39 +485,52 @@
                 <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" onclick="sendmail()">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
-            </form>         
+            </form>
+          
           </div>
+
           <div class="col-md-6">
-          	<div id="map"></div>
+          	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.282945820917!2d76.44648941460173!3d30.371322410012535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391027fdb148cb13%3A0x983b94c04f3996c6!2sPatiala+School+For+The+Deaf!5e0!3m2!1sen!2sin!4v1563466527355!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </section>
 
-<!--Donate button-->
-  <a href="donate.html">
-  <div id="donatebutton"  style="color: white;background-color: pink;position: fixed;bottom: 5%;right: 5%;border-radius: 40px;width:15%;height:8%;font-size: 150%" ><p style="margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
 
-  <footer class="ftco-footer ftco-bg-dark ftco-section">
+
+<!--Donate button-->
+<a href="donate.html">
+<div id="donatebutton"  style="color: white;background-color: #78d5ef;position: fixed;bottom: 5%;right: 5%;border-radius: 40px;width:15%;height:8%;font-size: 150%" ><p style="margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
+
+    
+
+
+
+
+
+
+		
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">PatialaSchool</h2>
-              <p>We make the children,<br>Service Providers,<br>not Service Seekers</p>
+              <h2 class="ftco-heading-2">PatialaSchools</h2>
+              <p>We make the children,<br>Service Providers,<br>not Service seekers</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="https://twitter.com/patialadeafscho"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/SocietyForTheWelfareofHandicapped/"><span class="icon-facebook"></span></a></li>   
+                <li class="ftco-animate"><a href="https://www.facebook.com/SocietyForTheWelfareofHandicapped/"><span class="icon-facebook"></span></a></li>
+                
               </ul>
             </div>
           </div>
-
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
@@ -538,34 +551,37 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">VILLAGE SAIFIDIPUR
-                                                                                    BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
-                                                                                    PUNJAB, INDIA
-                                                                </span>
-                  </li>
+BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
+PUNJAB, INDIA</span></li>
 	                <li><a href="tel://+91 97800 43892"><span class="icon icon-phone"></span><span class="text">+91 97800 43892, +91 97800 43893</span></a></li>
 	                <li><a href="mailto:info@patialaschool.com"><span class="icon icon-envelope"></span><span class="text">info@patialaschool.com</span></a></li>
+
 
 	              </ul>
 	            </div>
               <a href="donate.html">
-        <div id="donatebutton"  style="color: white;background-color: pink;position: absolute;border-radius: 40px;width:50%;height:18%;font-size: 150%" ><p style="margin: 0;
-          position: absolute;
-          top: 50%;
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
+<div id="donatebutton"  style="color: white;background-color: #78d5ef;position: absolute;border-radius: 40px;width:50%;height:18%;font-size: 150%" ><p style="margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center">    
+          <div class="col-md-12 text-center">
+
+            
           </div>
         </div>
       </div>
     </footer>
+    
+  
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-  </body>
+
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -584,5 +600,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  <script src="common.js"></script>
+    
+  </body>
 </html>
