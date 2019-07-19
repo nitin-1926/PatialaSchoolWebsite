@@ -9,24 +9,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
   <script>
     $(document).ready(function(){
 
-$(window).scroll(function(){
-x = $(window).scrollTop();
+    $(window).scroll(function(){
+    x = $(window).scrollTop();
 
-if (x>0){ 
-$("#donatebutton").stop().animate({width:'4.5%'},500);
-$("#donatebutton_text").html("&nbsp;&nbsp;&nbsp❤");
-}
+    if (x>0){ 
+    $("#donatebutton").stop().animate({width:'4.5%'},500);
+    $("#donatebutton_text").html("&nbsp;&nbsp;&nbsp❤");
+    }
 
-$("#donatebutton").mouseover(function(){
-  $("#donatebutton").stop().animate({width:'15%'},500);
-$("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
-
-
-
+    $("#donatebutton").mouseover(function(){
+      $("#donatebutton").stop().animate({width:'15%'},500);
+    $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
 });
 });});
 </script>
@@ -48,7 +44,6 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -63,7 +58,6 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	        	<li class="nav-item active"><a href="index.html" class="nav-link"><font style="color: black;">Home</font></a></li>
@@ -78,52 +72,43 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
 	    </div>
 	  </nav>
     <!-- END nav -->
-
     <div class="container" style="width: 100%; margin-top: 6%">
       <img style="margin-left: 0%;" src="images/plogo.jpg"><img style="margin-left: 45%;"src="images/plogo2.jpg">
     </div>
-
     <!-- login box -->
-
     <section>
         <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
           <div class="modal-dialog">
-            <div class="modal-content" style="background-color: #3a3a3a;color:#888">
-              
+            <div class="modal-content" style="background-color: #3a3a3a;color:#888">     
               <div class="modal-header">
                 <p style="color:orange">For administrative purposes only:</p>
                 <button type="button" class="close" data-dismiss="modal" style="color: #fff">
                   <span aria-hidden="true" >&times;</span><span class="sr-only">Close</span>
                 </button>
-              </div>
-              
+              </div>     
               <div class="modal-body">
                 
-                      <form role="form" action="" method="post" class="login-form" ng-app="" name="myForm">
-                        <div class="form-group">
-                          <label class="sr-only" for="form-username"style="border-color: #399599">Email</label>
-                            <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" required><br>
-                            <span style="color:orange" ng-show="myForm.myaddress.$error.email"><i class="fa fa-remove"></i>Please Enter a valid email address..</span> 
-                          </div>
-                          <div class="form-group">
-                            <label class="sr-only" for="form-password">Password</label>
-                            <input type="password" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
-                            <div ng-messages="myForm.userPassword.$error">
-                              
-                              <div style="color:orange" ng-show="!myForm.userPassword.$valid"><i class="fa fa-remove" ></i>Invalid Password</div>
-          </div>
-              </div>              
-                          </div>
-                          <button type="submit" class="btn  btn-lg" style="background-color: orange" >Log in!</button>
-                      </form>
-                      
+                <form role="form" action="" method="post" class="login-form" ng-app="" name="myForm">
+                  <div class="form-group">
+                    <label class="sr-only" for="form-username"style="border-color: #399599">Email</label>
+                      <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" required><br>
+                      <span style="color:orange" ng-show="myForm.myaddress.$error.email"><i class="fa fa-remove"></i>Please Enter a valid email address..</span> 
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="form-password">Password</label>
+                      <input type="password" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
+                      <div ng-messages="myForm.userPassword.$error">
+                        
+                        <div style="color:orange" ng-show="!myForm.userPassword.$valid"><i class="fa fa-remove" ></i>Invalid Password</div>
+                      </div>
+                    </div>
+                  </form>             
+                </div>
+                <button type="submit" class="btn  btn-lg" style="background-color: orange" >Log in!</button> 
               </div>
-              
             </div>
           </div>
         </div>
-
-
     </section>
     
     <section class="home-slider js-fullheight owl-carousel">
@@ -141,9 +126,6 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
         </div>
       </div>
     </section>
-
-
-
 <div>
   <style type="text/css">
     .project {
@@ -275,9 +257,6 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
       background: #fdb82c; }
   </style>
 
-
-
-
      <section class="ftco-section ftco-project bg-light" data-section="projects">
       <div class="container-fluid px-md-5">
         <div class="row justify-content-center pb-5">
@@ -395,11 +374,7 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
     </section>
   </div>
 
-
 <a name="foundation_day"></a>
-
-
-
 
  <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
                   <div class="pr-md-5 mr-md-5">
@@ -407,7 +382,6 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
                     
                   </div>
                   </div>
-
 
 		<section class="ftco-section" id="1">
     	<div class="container-fluid">
@@ -637,25 +611,13 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
           </div>
         </div>
     	</div>
-
     </section>
-
-
-
-    
-<a name="fd2" style=" "> </a>
-
-
+  <a name="fd2" style=" "> </a>
     <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line"  style="padding-top: 90px">
                   <div class="pr-md-5 mr-md-5">
-
                     <span class="subheading">49<sup>th</sup> FOUNDATION DAY ALBUM</span>
-                    
                   </div>
                   </div>
-
-
-
     <section class="ftco-section" id="2">
       <div class="container-fluid">
         <div class="row no-gutters">
@@ -841,24 +803,14 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
         </div>
       </div>
     </section>
-
-
-
-
     <a name="ac"></a>
-
-
-
-
-    <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
+     <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
                   <div class="pr-md-5 mr-md-5">
                     <span class="subheading">ART & CRAFT ALBUM</span>
                     
                   </div>
                   </div>
-
-
-    <section class="ftco-section" id="3">
+   <section class="ftco-section" id="3">
       <div class="container-fluid">
         <div class="row no-gutters">
           <div class="col-md-6 col-lg-3 ftco-animate">
@@ -968,24 +920,13 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
         </div>
       </div>
     </section>
-
-
-
     <a name="pk"></a>
-
-
-
-
     <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
                   <div class="pr-md-5 mr-md-5">
                     <span class="subheading">PREM KUNJ INAUGRATION ALBUM</span>
                     
                   </div>
                   </div>
-
-    
-
-
     <section class="ftco-section" id="4">
       <div class="container-fluid">
         <div class="row no-gutters">
@@ -1056,15 +997,12 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
             <div class="project">
               <div>
               <img src="images/pk8.jpg" class="img-fluid" alt="Colorlib Template">
-            </div>
-              
+            </div> 
               <a href="images/pk8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
                 <span class="icon-expand"></span>
               </a>
             </div>
-          </div>
-          
-          
+          </div>  
         </div>
         <div class="row mt-5">
           <div class="col text-center">
@@ -1086,24 +1024,12 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
         </div>
       </div>
     </section>
-
-
-
-
-
     <a name="psb"></a>
-
-
-
     <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
                   <div class="pr-md-5 mr-md-5">
-                    <span class="subheading">PATIALA SCHOOL FOR BLIND ALBUM</span>
-                    
+                    <span class="subheading">PATIALA SCHOOL FOR BLIND ALBUM</span>             
                   </div>
                   </div>
-
-
-
     <section class="ftco-section" id="5">
       <div class="container-fluid">
         <div class="row no-gutters">
@@ -1290,22 +1216,13 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
         </div>
       </div>
     </section>
-
-
-
-
     <a name="psd"></a>
-
-
     <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
                   <div class="pr-md-5 mr-md-5">
                     <span class="subheading">PATIALA SCHOOL FOR DEAF ALBUM</span>
                     
                   </div>
                   </div>
-
-
-
     <section class="ftco-section" id="6">
       <div class="container-fluid">
         <div class="row no-gutters">
@@ -1593,23 +1510,13 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
         </div>
       </div>
     </section>
-
-
-
-
-
     <a name="misc"></a>
-
-
-
     <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line" style="padding-top:90px">
                   <div class="pr-md-5 mr-md-5">
                     <span class="subheading">MISC ACTIVITIES ALBUM</span>
                     
                   </div>
-                  </div>
-
-
+    </div>
     <section class="ftco-section" id="7">
       <div class="container-fluid">
         <div class="row no-gutters">
@@ -1831,7 +1738,6 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
                 <li><a href="#psd">6</a></li>
                 <li class="active"><span>7</span></li>
                 
-                
               </ul>
             </div>
           </div>
@@ -1839,25 +1745,13 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
       </div>
     </section>
 
-
-
-
 <!--Donate button-->
-<a href="donate.html">
-<div id="donatebutton"  style="color: white;background-color: #78d5ef;position: fixed;bottom: 5%;right: 5%;border-radius: 40px;width:15%;height:8%;font-size: 150%" ><p style="margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
-
-    
-
-
-
-
-
-
-    
+    <a href="donate.html">
+    <div id="donatebutton"  style="color: white;background-color: #78d5ef;position: fixed;bottom: 5%;right: 5%;border-radius: 40px;width:15%;height:8%;font-size: 150%" ><p style="margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
@@ -1893,36 +1787,29 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
               <div class="block-23 mb-3">
                 <ul>
                   <li><span class="icon icon-map-marker"></span><span class="text">VILLAGE SAIFIDIPUR
-BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
-PUNJAB, INDIA</span></li>
+                                                                                    BEHIND PUNJABI UNIVERSITY, PATIALA - 147001
+                                                                                    PUNJAB, INDIA</span></li>
                   <li><a href="tel://+91 97800 43892"><span class="icon icon-phone"></span><span class="text">+91 97800 43892, +91 97800 43893</span></a></li>
                   <li><a href="mailto:info@patialaschool.com"><span class="icon icon-envelope"></span><span class="text">info@patialaschool.com</span></a></li>
-
-
                 </ul>
               </div>
               <a href="donate.html">
-<div id="donatebutton"  style="color: white;background-color: #78d5ef;position: absolute;border-radius: 40px;width:50%;height:18%;font-size: 150%" ><p style="margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
+          <div id="donatebutton"  style="color: white;background-color: #78d5ef;position: absolute;border-radius: 40px;width:50%;height:18%;font-size: 150%" ><p style="margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);" id="donatebutton_text"> &nbsp;&nbsp;&nbsp;❤ Donate Now</p></div></a>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            
           </div>
         </div>
       </div>
     </footer>
-  
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
