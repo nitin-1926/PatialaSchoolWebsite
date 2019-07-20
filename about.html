@@ -80,7 +80,6 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
     </div>
 
     <!-- login box -->
-
     <section>
         <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
           <div class="modal-dialog">
@@ -93,31 +92,27 @@ $("#donatebutton_text").html(" &nbsp;&nbsp;&nbsp;❤ Donate Now");
                 </button>
               </div>
               
-              <div class="modal-body">
-                
-                      <form role="form" action="" method="post" class="login-form" ng-app="" name="myForm">
+                <div class="modal-body">
+                    <form role="form" action="" method="post" class="login-form" ng-app="" name="myForm">
                         <div class="form-group">
                           <label class="sr-only" for="form-username"style="border-color: #399599">Email</label>
-                            <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" required><br>
-                            <span style="color:orange" ng-show="myForm.myaddress.$error.email"><i class="fa fa-remove"></i>Please Enter a valid email address..</span> 
+                            <input type="email" name="myaddress" ng-model="em" placeholder="Email..." class="form-username form-control" id="form-username" required style="border-radius: 8px; "><br>
+                            <span style="color:orange"  ng-show="myForm.myaddress.$error.email"><i class="fa fa-remove"></i>Please Enter a valid email address..</span> 
                           </div>
-                          <div class="form-group">
+                        <div class="form-group">
                             <label class="sr-only" for="form-password">Password</label>
-                            <input type="password" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
+                            <input style="border-radius: 8px;" type="password" name="userPassword" placeholder="Password..." class="form-password form-control" id="form-password" ng-model="n2" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/"><br>
                             <div ng-messages="myForm.userPassword.$error">
-                              
-                              <div style="color:orange" ng-show="!myForm.userPassword.$valid"><i class="fa fa-remove" ></i>Invalid Password</div>
-          </div>
-              </div>              
-                          </div>
-                          <button type="submit" class="btn  btn-lg" style="background-color: orange" >Log in!</button>
-                      </form>
-                      
+              </div>
+                  </div>
+            </form>             
+                </div>
+                <center><button type="submit" class="btn btn-warning" style="border-radius: 5px;background-color: orange; margin-bottom: 8%; width: 30%;" onclick="login()">Login</button>
+                </center>
               </div>
               
             </div>
           </div>
-        </div>
     </section>
     
     <section class="home-slider js-fullheight owl-carousel">
